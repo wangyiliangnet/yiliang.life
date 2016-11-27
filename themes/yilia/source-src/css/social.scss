@@ -27,6 +27,13 @@
         a:last-of-type {
             margin-right:0
         }
+        a.cloudmusic {
+            background:url('./img/cloudmusic.png') center no-repeat #C10D0C;
+            border:1px solid #C10D0C;
+            &:hover {
+                border:1px solid #C10D0C;
+            }
+        }
         a.weibo {
             background:url('./img/weibo.png') center no-repeat #aaaaff;
             border:1px solid #aaaaff;
