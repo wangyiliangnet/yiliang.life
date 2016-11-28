@@ -5,9 +5,10 @@ menu:
 
 # SubNav
 subnav:
-  github: "https://github.com/wangyiliangnet"
+  cloudmusic: "http://music.163.com/#/user/home?id=35889921"
   weibo: "http://weibo.com/u/1996060677/home"
   zhihu: "https://www.zhihu.com/people/wang-yi-liang-86/activities"
+  github: "https://github.com/wangyiliangnet"
   #douban: "#"
   #mail: "#"
   #facebook: "#"
@@ -34,7 +35,7 @@ animate: true
 open_in_new: false
 
 # Miscellaneous
-google_analytics: ''
+baidu_analytics: true
 favicon: favicon.ico
 
 #你的头像url
