@@ -51,10 +51,9 @@
   }) %>
 <% } %>
 
-<!-- UY BEGIN -->
-<div id="uyan_frame"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js" defer async></script>
-<!-- UY END -->
+<% if (!index && theme.uyan && post.comments){ %>
+<%- partial('post/uyan') %>
+<% } %>
 
 <% if (!index && post.comments && config.disqus_shortname){ %>
 <section id="comments">

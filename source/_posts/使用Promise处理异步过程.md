@@ -20,24 +20,24 @@ A(function (somethingFromA) {
 ```
 当回调层数增多时，代码就变得不那么清楚了。特别是在模块之间相互调用，同步和异步过程都有的时候，处理起来就非常麻烦。
 ![回调地狱](/assets/img/callback-hell.jpeg)
-
+<!-- more -->
 使用Promise可以这样写：
 ``` javascript
 function A() {
     //do someting async;
     return Promise.resolve(result);
 }
-    
+
 function B(sometingFromA) {
     //do someting async depending on something from A;
     return Promise.resolve(result);
 }
-    
+
 function C(somethingFromB) {
     //do someting async depending on something from B;
     return result
 }
-    
+
 A().then(B).then(C);
 ```
 如果对异步过程加上错误处理，代码就更复杂了：
@@ -66,7 +66,7 @@ function A() {
     //do someting async;
     return Promise.resolve(result);
 }
-    
+
 function B(sometingFromA) {
     if(somethingWrong){
         return Promise.reject(error);
@@ -74,7 +74,7 @@ function B(sometingFromA) {
     //do someting async depending on something from A;
     return Promise.resolve(result);
 }
-    
+
 function C(somethingFromB) {
     if(somethingWrong){
         return Promise.reject(error);
@@ -82,7 +82,7 @@ function C(somethingFromB) {
     //do someting async depending on something from B;
     return result
 }
-    
+
 A().then(B).then(C).catch(function (error) {
     //deal with the error;
 });
@@ -119,17 +119,17 @@ Promise.all([A(), B()]).then(function (result) {
 ##### Promise.resolve、Promise.reject和new Promise:
 ``` javascript
 var a = 21;
-    
+
 //以下两种写法等效
 Promise.resolve(a);
-    
+
 new Promise(function (resolve, reject) {
     resolve(a);
 });
-    
+
 //以下两种写法等效
 Promise.reject(a);
-    
+
 new Promise(function (resolve, reject) {
     reject(a);
 });
@@ -138,7 +138,7 @@ new Promise(function (resolve, reject) {
 ``` javascript
 var promise21 = Promise.resolve(21);
 //promise21是promise;
-    
+
 Promise.resolve(promise).then( function(result) {
     //这里得到的result是21而不是promise21;
     console.log(result);
@@ -189,23 +189,23 @@ Promise.resovle(21)
 //注意下面两种写法的区别：
 //写法1：
 var promise21 = Promise.resolve(21);
-    
+
 promise21.then(function (result) {
     console.log(result);
     return result * 2;
 });
-    
+
 promise21.then(function (result) {
     console.log(result);
     return result + 1;
 });
-    
+
 //21
 //22
-    
+
 //写法2：
 var promise21 = Promise.resolve(21);
-    
+
 promise21
     .then(function (result) {
         console.log(result);
