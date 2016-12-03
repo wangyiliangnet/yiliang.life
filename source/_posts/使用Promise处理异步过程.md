@@ -1,5 +1,6 @@
 ---
 title: 使用Promise处理异步过程
+date: 2016-11-27
 tags:
     - JavaScript
     - 异步
