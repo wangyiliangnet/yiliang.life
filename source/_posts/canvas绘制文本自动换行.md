@@ -95,3 +95,5 @@ function breakLinesForCanvas (text, width, font) {
     return result;
 }
 ```
+<p data-height="407" data-theme-id="0" data-slug-hash="oYqNBN" data-default-tab="js,result" data-user="YiliangWang" data-embed-version="2" data-pen-title="canvas绘制文本自动换行" class="codepen">See the Pen <a href="http://codepen.io/YiliangWang/pen/oYqNBN/">canvas绘制文本自动换行</a> by Yiliang Wang (<a href="http://codepen.io/YiliangWang">@YiliangWang</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
